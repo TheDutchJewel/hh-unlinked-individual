@@ -34,17 +34,16 @@ The module provides:
 
 * a tree-home-page block with a button to create an unlinked individual
 * access restricted to editors, moderators, managers, and administrators
-* use of the standard webtrees 2.2 new-individual edit form
+* use of the standard webtrees 2.2 unlinked-individual workflow
 * return to the tree page or direct navigation to the newly created individual
 
 ## Program flow
 
 1. An authorized user opens a tree home page.
 1. The block shows a button labeled `Create an unlinked individual`.
-1. The button opens the module route `/tree/{tree}/unlinked-individual`.
-1. The page renders the standard webtrees `edit/new-individual` form.
-1. On submit, the edit lines are converted to GEDCOM by `GedcomEditService`.
-1. The new record is created with `Tree::createIndividual()`.
+1. The button opens the standard webtrees route `/tree/{tree}/add-unlinked-individual`.
+1. webtrees renders the standard `edit/new-individual` form.
+1. On submit, webtrees handles validation, GEDCOM creation, and record creation.
 1. The first save button returns to the tree page; the second save button opens the new individual.
 
 ## Requirements
@@ -84,7 +83,7 @@ Current translation files:
 ## Status
 
 The module infrastructure and program flow have been updated for webtrees 2.2.
-The current implementation intentionally reuses the standard webtrees new-individual form instead of maintaining a custom form.
+The current implementation intentionally links to the standard webtrees unlinked-individual workflow instead of maintaining a custom form or submit handler.
 
 ## Credits
 
