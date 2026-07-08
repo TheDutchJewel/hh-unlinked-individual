@@ -40,7 +40,7 @@ class UnlinkedIndividualModule extends AbstractModule implements ModuleCustomInt
     public const CUSTOM_GITHUB_USER = 'hartenthaler';
     public const GITHUB_REPO        = self::CUSTOM_GITHUB_USER . '/' . self::CUSTOM_MODULE;
     public const CUSTOM_WEBSITE     = 'https://github.com/' . self::GITHUB_REPO . '/';
-    public const CUSTOM_VERSION     = '2.2.6.0';
+    public const CUSTOM_VERSION     = '2.2.6.1';
     public const CUSTOM_LAST        = 'https://github.com/' . self::CUSTOM_GITHUB_USER . '/' .
                                       self::CUSTOM_MODULE . '/raw/main/latest-version.txt';
 
